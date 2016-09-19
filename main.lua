@@ -12,13 +12,17 @@ function CamelCase.new()
 	--- LuaDoc desc
 	-- that spans multiple
 	-- lines that use that word "that" a lot.
-	-- @returns nothing useful
+	-- @returns CamelCase pseudo-object that mimics
+	-- roblox built-in behavior of things
 
 	local self = setmetatable({}, CamelCase)
 
 	-- UsefulProperties
-	self.propertyThatCouldGoInCamelCase = false
+	self.propertyThatCouldGoInMetatable = false
 	self.Maid = MakeMaid()
+	
+	-- Content, basically the SAME EXACT THING as rbxasset://textures/WhiteCircle.png
+	self.Image = "http://OutDatedRobloxLinkUsingHttp/CircleIconThatIsAlreadyBuiltIn/1234512"
 
 	-- Call "Go" before running anything else that that that
 	return self
@@ -51,7 +55,21 @@ function CamelCase:SetTransparency(value)
 	self.Transparency = value
 end
 
+function CamelCase:GetImage()
+	--- Returns the image of a CamelCase
+	-- @return The image of the camelcase
+	
+	-- This hacky method allows you
+	-- to find the image
+	return self.Image
+end
+
 function CamelCase:GetTransparency()
+	--- Find transparency, given that
+	-- you call that method that 
+	-- that that that.
+	-- Incomplete sentence. Another.
+	
 	return self.Transparency
 end
 
@@ -77,6 +95,8 @@ function CamelCase:Go(r)
 	-- Calculations from AxisAngles
 	local newTab = self:InterestingFunction()
 	local unhelpfulName = self:ProbablyForExternalUse(newTab)
+	
+	self.Image = self:GetImage()
 
 	local finalize = self:MightBeAnInternalFunction(unhelpfulName)
 	return finalize
